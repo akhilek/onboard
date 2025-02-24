@@ -52,7 +52,9 @@ export function OnboardingForm() {
   const handleSaveAndContinueLater = () => {
     localStorage.setItem('onboardingFormData', JSON.stringify(formData));
     localStorage.setItem('onboardingStep', activeStep.toString());
-    alert('Your progress has been saved. You can continue later from where you left off.');
+    // alert('Your progress has been saved. You can continue later from where you left off.');
+    window.location.href = "http://localhost:5175";
+
   };
 
   const handleCompanyInfoSubmit = (data: OnboardingData['companyInfo']) => {
